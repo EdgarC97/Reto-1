@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block body %}
+    <h1 class="mb-4">Bienvenido, {{ app.user.userIdentifier }}!</h1>
+
+    <div class="d-flex gap-3">
+        <a href="{{ path('app_employee_index') }}" class="btn btn-primary btn-lg">Employees</a>
+        <a href="{{ path('app_project_index') }}" class="btn btn-success btn-lg">Projects</a>
+        <a href="{{ path('app_audit_index') }}" class="btn btn-warning btn-lg">Audit</a>
+    </div>
+{% endblock %}
